@@ -1,0 +1,24 @@
+{
+  "name": "tweet-truncate",
+  "version": "1.0.0",
+  "description": "Chops text and urls down to size for Twitter using ellipses.",
+  "main": "index.js",
+  "scripts": {
+    "test": "make test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:jimkang/tweet-truncate.git"
+  },
+  "keywords": [],
+  "author": "Jim Kang",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jimkang/tweet-truncate/issues"
+  },
+  "homepage": "https://github.com/jimkang/tweet-truncate",
+  "devDependencies": {
+    "tape": "^3.0.3"
+  },
+  "dependencies": {}
+}
