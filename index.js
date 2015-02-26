@@ -10,6 +10,10 @@ function truncateToTweet(opts) {
 
   var truncated = opts.text;
   var maxTextLength = maxTweetMessageLength;
+  var urlDelimiter = ' ';
+  if (opts.delimiter) {
+    urlDelimiter = opts.delimiter;
+  }
 
   if (opts.urlsToAdd && opts.urlsToAdd.length > 0) {
     // 20 chars for each url.
@@ -26,7 +30,7 @@ function truncateToTweet(opts) {
 
   if (opts.urlsToAdd) {
     opts.urlsToAdd.forEach(function appendURL(url) {
-      truncated += (' ' + url);
+      truncated += (urlDelimiter + url);
     });
   }
 

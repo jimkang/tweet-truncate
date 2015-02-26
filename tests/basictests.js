@@ -62,3 +62,22 @@ test('Truncate to fit two urls', function truncateForTwoURLs(t) {
     'Truncates the text to fit two urls.'
   );
 });
+
+test('Use alternate delimiter', function alternateDelimiter(t) {
+  t.plan(1);
+
+  var truncated = truncateToTweet({
+    text: 'Normally, this text would not need to be truncated. However! A URL must be included in the tweet. URL stands for Universal Resource Locator.',
+    urlsToAdd: [
+      'http://smidgeo.com/plan',
+      'http://nonstopscrollshop.com'
+    ],
+    delimiter: '\n'
+  });
+
+  t.equal(
+    truncated,
+    'Normally, this text would not need to be truncated. However! A URL must be included in the tw…\nhttp://smidgeo.com/plan\nhttp://nonstopscrollshop.com',
+    'Uses the specified delimiter.'
+  );
+});
