@@ -39,7 +39,7 @@ test('Truncate to fit url', function truncateForURL(t) {
 
   t.equal(
     truncated,
-    'Normally, this text would not need to be truncated. However! A URL must be included in the tweet. URL stands for Uni… http://smidgeo.com/plan',
+    'Normally, this text would not need to be truncated. However! A URL must be included in the tweet. URL stands fo… http://smidgeo.com/plan',
     'Truncates the text to fit a url.' 
   );
 });
@@ -58,7 +58,7 @@ test('Truncate to fit two urls', function truncateForTwoURLs(t) {
 
   t.equal(
     truncated,
-    'Normally, this text would not need to be truncated. However! A URL must be included in the tw… http://smidgeo.com/plan http://nonstopscrollshop.com',
+    'Normally, this text would not need to be truncated. However! A URL must be included… http://smidgeo.com/plan http://nonstopscrollshop.com',
     'Truncates the text to fit two urls.'
   );
 });
@@ -77,7 +77,7 @@ test('Use alternate delimiter', function alternateDelimiter(t) {
 
   t.equal(
     truncated,
-    'Normally, this text would not need to be truncated. However! A URL must be included in the tw…\nhttp://smidgeo.com/plan\nhttp://nonstopscrollshop.com',
+    'Normally, this text would not need to be truncated. However! A URL must be included…\nhttp://smidgeo.com/plan\nhttp://nonstopscrollshop.com',
     'Uses the specified delimiter.'
   );
 });
