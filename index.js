@@ -1,6 +1,5 @@
 var shortenedURLLength = 27;
 var maxTweetMessageLength = 140;
- - shortenedURLLength - 2;
 var ellipsis = '\u2026';
 
 function truncateToTweet(opts) {
