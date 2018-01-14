@@ -1,11 +1,14 @@
 var shortenedURLLength = 27;
-var maxTweetMessageLength = 140;
- - shortenedURLLength - 2;
 var ellipsis = '\u2026';
 
 function truncateToTweet(opts) {
+  var maxTweetMessageLength = 280;
+
   if (!opts || !opts.text) {
     throw new Error('No text supplied in opts.');
+  }
+  if (opts.maxTweetMessageLength) {
+    maxTweetMessageLength = opts.maxTweetMessageLength;
   }
 
   var truncated = opts.text;

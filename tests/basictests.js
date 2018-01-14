@@ -5,6 +5,7 @@ test('Truncate', function truncate(t) {
   t.plan(1);
 
   var truncated = truncateToTweet({
+    maxTweetMessageLength: 140,
     text: 'I am definitely more that 140 characters. Because I have a lot of important things to say. Yes, America, you need to hear this. You need to hear all of it!'
   });
 
@@ -21,6 +22,7 @@ test('No truncate', function doNotTruncate(t) {
   var oneForty = 'This tweet is exactly 140 characters. It does not deep to be truncated. Truncating it is unnecessary. Why would you do that? It\'s a waste!';
 
   var truncated = truncateToTweet({
+    maxTweetMessageLength: 140,
     text: oneForty
   });
 
@@ -31,6 +33,7 @@ test('Truncate to fit url', function truncateForURL(t) {
   t.plan(1);
 
   var truncated = truncateToTweet({
+    maxTweetMessageLength: 140,
     text: 'Normally, this text would not need to be truncated. However! A URL must be included in the tweet. URL stands for Universal Resource Locator.',
     urlsToAdd: [
       'http://smidgeo.com/plan'
@@ -49,6 +52,7 @@ test('Truncate to fit two urls', function truncateForTwoURLs(t) {
   t.plan(1);
 
   var truncated = truncateToTweet({
+    maxTweetMessageLength: 140,
     text: 'Normally, this text would not need to be truncated. However! A URL must be included in the tweet. URL stands for Universal Resource Locator.',
     urlsToAdd: [
       'http://smidgeo.com/plan',
@@ -67,6 +71,7 @@ test('Use alternate delimiter', function alternateDelimiter(t) {
   t.plan(1);
 
   var truncated = truncateToTweet({
+    maxTweetMessageLength: 140,
     text: 'Normally, this text would not need to be truncated. However! A URL must be included in the tweet. URL stands for Universal Resource Locator.',
     urlsToAdd: [
       'http://smidgeo.com/plan',

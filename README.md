@@ -13,6 +13,7 @@ Usage
 
     var truncateToTweet = require('tweet-truncate');
     console.log(truncateToTweet({
+      maxTweetMessageLength: 140,
       text: 'Normally, this text would not need to be truncated. However! A URL must be included in the tweet. URL stands for Universal Resource Locator.',
       urlsToAdd: [
         'http://smidgeo.com/plan'
@@ -22,6 +23,8 @@ Usage
 This would print out:
 
     Normally, this text would not need to be truncated. However! A URL must be included in the tweet. URL stands for Uni… http://smidgeo.com/plan
+
+`maxTweetMessageLength` defaults to 280 now.
 
 Tests
 -----
